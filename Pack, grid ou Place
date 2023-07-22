@@ -1,0 +1,65 @@
+####################### Usando Pack, onde o elemento é inserido automaticamente sem tamanho definido
+from tkinter import *
+
+janela = Tk()
+janela.geometry('500x250') #Larg x alt
+txt = Label(janela, 
+            width=25, 
+            height=2, 
+            fg ='#fefefe', 
+            background='black', 
+            text = 'Infinity School no modo place')
+txt.pack()
+
+janela.mainloop()
+
+####################### Usando grid, onde se define por linhas e columa onde se quer colocar o elemento
+
+from tkinter import *
+
+janela = Tk()
+janela.geometry('500x250') #Larg x alt
+txt1 = Label(janela, 
+            width=25, 
+            height=2, 
+            fg ='#fefefe', 
+            background='black', 
+            text = 'Infinity School no modo place')
+txt1.grid(row=1,column=0)
+
+txt2 = Label(janela, 
+            width=25, 
+            height=2, 
+            fg ='#fefefe', 
+            background='red', 
+            text = 'TESTE')
+txt2.grid(row=2,column=1)
+
+janela.mainloop()
+
+
+from tkinter import *
+
+janela = Tk()
+janela.geometry('500x250') #Larg x alt
+txt1 = Label(janela, 
+            width=25, 
+            height=2, 
+            fg ='#fefefe', 
+            background='black', 
+            text = 'Infinity School no modo place')
+txt1.place(x=10, y=20) #X Lateral e Y Vertical
+
+txt2 = Label(janela, 
+            width=25, 
+            height=2, 
+            fg ='#fefefe', 
+            background='red', 
+            text = 'TESTE')
+txt2.place(x=300, y=60) #X Lateral e Y Vertical
+
+
+
+####################### Usando Place, onde se define exatamente onde se quer colocar o elemento
+
+janela.mainloop()
