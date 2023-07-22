@@ -1,0 +1,41 @@
+#### Miniprograma de tela de login
+
+from tkinter import *
+
+janela = Tk()
+janela.geometry('200x150') #Larg x alt
+txt1 = Label(janela, 
+            width=4, 
+            height=1, 
+            fg ='black', 
+            text = 'Login')
+txt1.place(x=10, y=20) #X Lateral e Y Vertical
+campo = Entry(janela)
+campo.place(x=10, y= 40, width=145)
+
+txt2 = Label(janela, 
+            width=4, 
+            height=1, 
+            fg ='black', 
+            text = 'Senha')
+txt2.place(x=10, y=60) #X Lateral e Y Vertical
+
+campo2 = Entry(janela)
+campo2.place(x=10, y= 80, width=145)
+
+
+
+botao = Button(janela, 
+               background='black',
+               fg='#fefefe',
+               text='Login')
+botao.place(x=10, y= 110)
+
+botao2 = Button(janela, 
+            width=12, 
+            height=1, 
+            fg ='red', 
+            text = 'Esqueci a senha')
+botao2.place(x=60, y=110) #X Lateral e Y Vertical
+
+janela.mainloop()
