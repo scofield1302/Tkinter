@@ -100,10 +100,12 @@ def verificar_senha():
 def novo_cadastro():
     novo_login = entry_login.get()
     nova_senha = entry_senha.get()
-    if credenciais.get(novo_login) == None:
+    if nova_senha == "" or novo_login == "":
+        messagebox.showerror(title='ERRO!', message=f'Insira um nome de Usuário e uma Senha!')
+    if credenciais.get(novo_login) == None and novo_login != "" and nova_senha != "":
         credenciais[novo_login] = nova_senha
         messagebox.showinfo(title='Sucesso!', message=f'{novo_login} Cadastrado com sucesso!!')
-    else:
+    elif credenciais.get(novo_login) != None and novo_login != "" and nova_senha != "":
         messagebox.showerror(title='ERRO!', message=f'Usuário já está cadastrado!')
     
 b_logar = Button(
